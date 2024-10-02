@@ -5,10 +5,6 @@ export const javascript = [
   {
     name: "idea2app/javascript",
     "rules": {
-      "indent": ["error", 2],
-      "linebreak-style": ["error", "unix"],
-      "quotes": ["error", "double"],
-      "semi": ["error", "always"],
       "array-callback-return": ["error", { allowImplicit: true, checkForEach: true }],
       "no-constant-binary-expression": ["error"],
       "no-constructor-return": ["error"],
@@ -18,9 +14,6 @@ export const javascript = [
       "class-methods-use-this": ["warn", { enforceForClassFields: true }],
       "curly": ["error", "multi-or-nest"],
       "default-param-last": ["error"],
-
-      //"new-cap": ["error", { "newIsCap": true, "capIsNew": false }],
-
     }
   }
 ]
