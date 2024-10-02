@@ -16,7 +16,10 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsup && build:inspector",
+    "build:inspector": "eslint-config-inspector build",
+    "dev": "eslint-config-inspector dev",
+    "start:inspector": "eslint-config-inspector start"
   },
   "repository": {
     "type": "git",
@@ -31,6 +34,7 @@
     "eslint": "^9.11.1"
   },
   "devDependencies": {
+    "@eslint/config-inspector": "^0.5.4",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.7.4",
     "tsup": "^8.3.0",
