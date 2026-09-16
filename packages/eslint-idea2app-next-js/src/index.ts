@@ -1,9 +1,9 @@
 import nextPlugin from '@next/eslint-plugin-next';
 
-import jsx from 'eslint-idea2app-jsx';
+import TSX from 'eslint-idea2app-tsx';
 
-const nextJs = [
-  ...jsx,
+export const NextJS = [
+  ...TSX,
   {
     name: 'idea2app/next-js',
     rules: {
@@ -14,5 +14,4 @@ const nextJs = [
   }
 ];
 
-export default nextJs;
-export { nextJs };
+export default NextJS;

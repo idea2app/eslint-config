@@ -1,9 +1,10 @@
-# eslint-config
+# idea2app ESLint configuration
 
-Team ESLint config workspace.
+Workspace for idea2app ESLint shared rules.
+
+- Root package is workspace tooling/config only and is not published to NPM.
 
 ## Packages
 
-- `@idea2app/eslint-config`: base JavaScript rules
-- `eslint-idea2app-jsx`: shared JSX/TypeScript/React rules
-- `eslint-idea2app-next-js`: Next.js rules built on top of `eslint-idea2app-jsx`
+- `eslint-idea2app-tsx`: shared TypeScript/JSX rules
+- `eslint-idea2app-next-js`: Next.js rules built on top of `eslint-idea2app-tsx`

@@ -1,7 +1,7 @@
 {
-  "name": "eslint-idea2app-next-js",
-  "version": "0.1.0",
-  "description": "Shared Next.js ESLint rules for idea2app projects",
+  "name": "eslint-idea2app-tsx",
+  "version": "0.5.0",
+  "description": "Shared TypeScript/JSX ESLint rules for idea2app projects",
   "license": "LGPL-3.0",
   "type": "module",
   "files": [
@@ -25,10 +25,20 @@
     "build": "tsdown src/index.ts --format esm,cjs --dts --target node22 --out-dir dist"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": ">=16",
-    "eslint-idea2app-tsx": "workspace:*"
+    "@cspell/eslint-plugin": "^10.3.3",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-simple-import-sort": "^14.0.0",
+    "globals": "^17.12.0",
+    "typescript-eslint": "^8.70.0"
   },
   "devDependencies": {
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/node": "^24.6.0",
     "tsdown": "^0.23.0",
     "typescript": "^6.0.3"

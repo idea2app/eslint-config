@@ -8,7 +8,7 @@ import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 import tsEslint from 'typescript-eslint';
 
-export const jsx = tsEslint.config(
+export const TSX: any[] = tsEslint.config(
   {
     plugins: {
       '@typescript-eslint': tsEslint.plugin,
@@ -25,7 +25,7 @@ export const jsx = tsEslint.config(
   ...tsEslint.configs.recommended,
   {
     languageOptions: {
-      globals: { ...globals.es2020, ...globals.browser, ...globals.node },
+      globals: { ...globals.es2026, ...globals.browser, ...globals.node },
       parserOptions: {
         projectService: true,
         warnOnUnsupportedTypeScriptVersion: false
@@ -90,6 +90,6 @@ export const jsx = tsEslint.config(
     }
   },
   eslintConfigPrettier
-);
+) as any[];
 
-export default jsx;
+export default TSX;
