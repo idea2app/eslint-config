@@ -1,0 +1,29 @@
+{
+  "name": "eslint-idea2app-next-js",
+  "version": "0.0.1",
+  "description": "Shared Next.js ESLint rules for idea2app projects",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@next/eslint-plugin-next": "^15.0.0",
+    "eslint-idea2app-jsx": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.4.0",
+    "tsup": "^8.3.0",
+    "typescript": "^6.0.0"
+  }
+}
