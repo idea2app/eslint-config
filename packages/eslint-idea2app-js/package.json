@@ -1,0 +1,41 @@
+{
+  "name": "eslint-idea2app-js",
+  "version": "0.1.0",
+  "description": "Shared JavaScript ESLint rules for idea2app projects",
+  "license": "LGPL-3.0",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsdown src/index.ts --format esm,cjs --dts --target node22 --out-dir dist",
+    "test": "eslint --fix . && tsc --noEmit"
+  },
+  "dependencies": {
+    "@cspell/eslint-plugin": "^10.3.3",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-simple-import-sort": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/node": "^24.6.0",
+    "tsdown": "^0.23.0",
+    "typescript": "^6.0.3"
+  }
+}

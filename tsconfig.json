@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": ["es2022"],
+    "lib": ["esnext"],
     "module": "esnext",
     "moduleResolution": "bundler",
     "types": ["node"],
     "strict": true,
+    "skipLibCheck": true,
     "noUnusedLocals": true,
     "declaration": true,
     "noEmit": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
+    "esModuleInterop": true
   },
-  "include": ["src"]
+  "include": ["**/*"]
 }

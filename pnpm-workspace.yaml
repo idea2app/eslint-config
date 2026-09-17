@@ -1,0 +1,6 @@
+packages:
+  - 'packages/*'
+autoInstallPeers: false
+minimumReleaseAge: 0
+allowBuilds:
+  esbuild: true

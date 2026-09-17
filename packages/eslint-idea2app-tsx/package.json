@@ -1,0 +1,43 @@
+{
+  "name": "eslint-idea2app-tsx",
+  "version": "0.5.0",
+  "description": "Shared TypeScript/JSX ESLint rules for idea2app projects",
+  "license": "LGPL-3.0",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsdown src/index.ts --format esm,cjs --dts --target node22 --out-dir dist",
+    "test": "eslint --fix . && tsc --noEmit"
+  },
+  "dependencies": {
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.10.0",
+    "eslint-idea2app-js": "workspace:*",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^17.12.0",
+    "typescript-eslint": "^8.70.0"
+  },
+  "devDependencies": {
+    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
+    "@types/node": "^24.6.0",
+    "tsdown": "^0.23.0",
+    "typescript": "^6.0.3"
+  }
+}
