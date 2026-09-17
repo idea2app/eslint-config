@@ -108,17 +108,16 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
+      '@eslint/config-inspector':
+        specifier: ^3.5.0
+        version: 3.5.0(crossws@0.4.12(srvx@1.0.5))(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))(srvx@1.0.5)
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
       eslint:
         specifier: ^10.10.0
         version: 10.10.0(jiti@2.7.0)(supports-color@7.2.0)
-    devDependencies:
-      '@eslint/config-inspector':
-        specifier: ^3.5.0
-        version: 3.5.0(crossws@0.4.12(srvx@1.0.5))(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))(srvx@1.0.5)
 
   packages/eslint-idea2app-next-js:
     dependencies:

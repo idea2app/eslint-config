@@ -91,6 +91,6 @@ export const TSX: Linter.Config[] = tsEslint.config(
     }
   },
   eslintConfigPrettier
-) as Linter.Config[];
+);
 
 export default TSX;
