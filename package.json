@@ -1,44 +1,18 @@
 {
-  "name": "@idea2app/eslint-config",
-  "version": "0.0.1",
-  "description": "team eslint config",
-  "author": "",
-  "license": "MIT",
   "private": true,
   "type": "module",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": "./dist/index.js",
-    "./package.json": "./package.json"
-  },
   "scripts": {
-    "build": "corepack pnpm -r --filter \"./packages/**\" build && tsup && corepack pnpm run build:inspector",
+    "build": "pnpm -r --filter \"./packages/**\" build  &&  pnpm build:inspector",
     "build:inspector": "eslint-config-inspector build",
     "dev": "eslint-config-inspector dev",
     "start:inspector": "eslint-config-inspector start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/idea2app/eslint-config.git"
-  },
-  "bugs": {
-    "url": "https://github.com/idea2app/eslint-config/issues"
-  },
-  "homepage": "https://github.com/idea2app/eslint-config#readme",
   "dependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.10.0"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "^3.5.0",
-    "@types/node": "^24.6.0",
-    "tsup": "^8.5.1",
-    "typescript": "^6.0.3"
+    "@eslint/config-inspector": "^3.5.0"
   },
   "packageManager": "pnpm@12.0.0",
   "workspaces": [

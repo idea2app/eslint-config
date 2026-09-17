@@ -7,8 +7,9 @@ import react from 'eslint-plugin-react';
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 import tsEslint from 'typescript-eslint';
+import type { Linter } from 'eslint';
 
-export const TSX: any[] = tsEslint.config(
+export const TSX: Linter.Config[] = tsEslint.config(
   {
     plugins: {
       '@typescript-eslint': tsEslint.plugin,
@@ -90,6 +91,6 @@ export const TSX: any[] = tsEslint.config(
     }
   },
   eslintConfigPrettier
-) as any[];
+) as Linter.Config[];
 
 export default TSX;
