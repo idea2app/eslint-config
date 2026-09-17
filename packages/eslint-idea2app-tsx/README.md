@@ -1,12 +1,14 @@
 # idea2app ESLint rules for TSX
 
-Shared TypeScript + JSX ESLint rules for idea2app projects. It includes ESLint recommended baseline [1], TypeScript recommended rules [2], React rules [3], JSX accessibility rules [4], import sorting [5], stylistic rules [6], spellcheck rules [7], and Prettier-conflict disables [8].
+Shared TypeScript + JSX ESLint rules for idea2app projects.
 
-[1] https://eslint.org/docs/latest/
-[2] https://typescript-eslint.io/users/configs
-[3] https://github.com/jsx-eslint/eslint-plugin-react
-[4] https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
-[5] https://github.com/lydell/eslint-plugin-simple-import-sort
-[6] https://eslint.style/packages/plus
-[7] https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin
-[8] https://github.com/prettier/eslint-config-prettier
+## Upstream rules
+
+1. [`@eslint/js`](https://eslint.org/docs/latest/) - ESLint recommended baseline.
+2. [`typescript-eslint`](https://typescript-eslint.io/users/configs) - TypeScript recommended rules.
+3. [`eslint-plugin-react`](https://github.com/jsx-eslint/eslint-plugin-react) - React JSX rules.
+4. [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) - JSX accessibility rules.
+5. [`eslint-plugin-simple-import-sort`](https://github.com/lydell/eslint-plugin-simple-import-sort) - import sorting rules.
+6. [`@stylistic/eslint-plugin`](https://eslint.style/packages/plus) - stylistic formatting rules.
+7. [`@cspell/eslint-plugin`](https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin) - spellcheck rules.
+8. [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) - disables Prettier-conflicting rules.
