@@ -1,7 +1,8 @@
 import nextPlugin from '@next/eslint-plugin-next';
-
-import TSX from 'eslint-idea2app-tsx';
 import type { Linter } from 'eslint';
+import TSX, { TSXDictionaries } from 'eslint-idea2app-tsx';
+
+export const NextJSDictionaries = [...TSXDictionaries, 'next'];
 
 export const NextJS: Linter.Config[] = [
   ...TSX,
@@ -10,7 +11,16 @@ export const NextJS: Linter.Config[] = [
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
-      '@next/next/no-sync-scripts': 'warn'
+      '@next/next/no-sync-scripts': 'warn',
+      '@cspell/spellchecker': [
+        'warn',
+        {
+          cspell: {
+            language: 'en',
+            dictionaries: NextJSDictionaries
+          }
+        }
+      ]
     }
   }
 ];

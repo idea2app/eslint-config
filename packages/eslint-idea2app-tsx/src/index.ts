@@ -1,28 +1,31 @@
-import cspellPlugin from '@cspell/eslint-plugin';
-import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import eslintConfigPrettier from 'eslint-config-prettier';
+import type { ESLint } from 'eslint';
+import { defineConfig } from 'eslint/config';
+import JavaScript, { JavaScriptDictionaries } from 'eslint-idea2app-js';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
-import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 import tsEslint from 'typescript-eslint';
-import type { Linter } from 'eslint';
 
-export const TSX: Linter.Config[] = tsEslint.config(
+type FlatConfig = Parameters<typeof defineConfig>[number];
+
+export const TSXDictionaries = [
+  'css',
+  'typescript',
+  ...JavaScriptDictionaries
+];
+
+export const TSX = defineConfig(
   {
     plugins: {
       '@typescript-eslint': tsEslint.plugin,
       react,
-      jsxA11y,
-      '@stylistic': stylistic,
-      'simple-import-sort': simpleImportSortPlugin,
-      '@cspell': cspellPlugin
+      jsxA11y: jsxA11y as ESLint.Plugin,
+      '@stylistic': stylistic
     }
   },
-  { ignores: ['**/node_modules/**', '**/dist/**'] },
-  eslint.configs.recommended,
-  jsxA11y.flatConfigs.recommended,
+  ...JavaScript,
+  jsxA11y.flatConfigs.recommended as FlatConfig,
   ...tsEslint.configs.recommended,
   {
     languageOptions: {
@@ -33,11 +36,6 @@ export const TSX: Linter.Config[] = tsEslint.config(
       }
     },
     rules: {
-      'arrow-body-style': ['error', 'as-needed'],
-      'no-empty-pattern': 'warn',
-      'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
-      'consistent-return': 'warn',
-      'prefer-destructuring': ['error', { object: true, array: true }],
       'react/no-unescaped-entities': 'off',
       'react/self-closing-comp': ['error', { component: true, html: true }],
       'react/jsx-curly-brace-presence': [
@@ -77,20 +75,17 @@ export const TSX: Linter.Config[] = tsEslint.config(
           next: ['enum', 'interface', 'type']
         }
       ],
-      'simple-import-sort/exports': 'error',
-      'simple-import-sort/imports': 'error',
       '@cspell/spellchecker': [
         'warn',
         {
           cspell: {
             language: 'en',
-            dictionaries: ['typescript', 'node', 'next', 'css', 'bash', 'npm']
+            dictionaries: TSXDictionaries
           }
         }
       ]
     }
-  },
-  eslintConfigPrettier
+  }
 );
 
 export default TSX;

@@ -1,5 +1,1 @@
-import { javascript } from "./src";
-
-export default [
-  ...javascript
-];
+export { default } from 'eslint-idea2app-tsx';

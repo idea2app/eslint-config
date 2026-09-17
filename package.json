@@ -1,19 +1,21 @@
 {
   "private": true,
   "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@eslint/config-inspector": "^3.5.0",
+    "@types/node": "^24.13.5",
+    "eslint": "^10.10.0",
+    "eslint-idea2app-js": "workspace:*",
+    "eslint-idea2app-tsx": "workspace:*"
+  },
   "scripts": {
     "build": "pnpm -r --filter \"./packages/**\" build  &&  pnpm build:inspector",
     "build:inspector": "eslint-config-inspector build",
+    "test": "pnpm -r --filter \"./packages/**\" build && pnpm -r --filter \"./packages/**\" test",
     "dev": "eslint-config-inspector dev",
     "start:inspector": "eslint-config-inspector start"
-  },
-  "devDependencies": {
-    "@eslint/config-inspector": "^3.5.0",
-    "@eslint/js": "^10.0.1",
-    "eslint": "^10.10.0"
-  },
-  "packageManager": "pnpm@12.0.0",
-  "workspaces": [
-    "packages/*"
-  ]
+  }
 }

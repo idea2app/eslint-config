@@ -22,7 +22,8 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "tsdown src/index.ts --format esm,cjs --dts --target node22 --out-dir dist"
+    "build": "tsdown src/index.ts --format esm,cjs --dts --target node22 --out-dir dist",
+    "test": "eslint --fix . && tsc --noEmit"
   },
   "dependencies": {
     "@next/eslint-plugin-next": ">=16",

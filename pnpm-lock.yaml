@@ -112,12 +112,49 @@ importers:
       '@eslint/config-inspector':
         specifier: ^3.5.0
         version: 3.5.0(crossws@0.4.12(srvx@1.0.5))(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))(srvx@1.0.5)
+      '@types/node':
+        specifier: ^24.13.5
+        version: 24.13.5
+      eslint:
+        specifier: ^10.10.0
+        version: 10.10.0(jiti@2.7.0)(supports-color@7.2.0)
+      eslint-idea2app-js:
+        specifier: workspace:*
+        version: link:packages/eslint-idea2app-js
+      eslint-idea2app-tsx:
+        specifier: workspace:*
+        version: link:packages/eslint-idea2app-tsx
+
+  packages/eslint-idea2app-js:
+    dependencies:
+      '@cspell/eslint-plugin':
+        specifier: ^10.3.3
+        version: 10.3.3(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
       eslint:
         specifier: ^10.10.0
         version: 10.10.0(jiti@2.7.0)(supports-color@7.2.0)
+      eslint-config-prettier:
+        specifier: ^10.1.8
+        version: 10.1.8(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
+      eslint-plugin-simple-import-sort:
+        specifier: ^14.0.0
+        version: 14.0.0(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
+    devDependencies:
+      '@types/eslint-config-prettier':
+        specifier: ^6.11.3
+        version: 6.11.3
+      '@types/node':
+        specifier: ^24.6.0
+        version: 24.13.5
+      tsdown:
+        specifier: ^0.23.0
+        version: 0.23.0(typescript@6.0.3)
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
 
   packages/eslint-idea2app-next-js:
     dependencies:
@@ -140,30 +177,21 @@ importers:
 
   packages/eslint-idea2app-tsx:
     dependencies:
-      '@cspell/eslint-plugin':
-        specifier: ^10.3.3
-        version: 10.3.3(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
-      '@eslint/js':
-        specifier: ^10.0.1
-        version: 10.0.1(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
       '@stylistic/eslint-plugin':
         specifier: ^5.10.0
         version: 5.10.0(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
       eslint:
         specifier: ^10.10.0
         version: 10.10.0(jiti@2.7.0)(supports-color@7.2.0)
-      eslint-config-prettier:
-        specifier: ^10.1.8
-        version: 10.1.8(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
+      eslint-idea2app-js:
+        specifier: workspace:*
+        version: link:../eslint-idea2app-js
       eslint-plugin-jsx-a11y:
         specifier: ^6.10.2
         version: 6.10.2(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
       eslint-plugin-react:
         specifier: ^7.37.5
         version: 7.37.5(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
-      eslint-plugin-simple-import-sort:
-        specifier: ^14.0.0
-        version: 14.0.0(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))
       globals:
         specifier: ^17.12.0
         version: 17.12.0
@@ -171,9 +199,6 @@ importers:
         specifier: ^8.70.0
         version: 8.70.0(eslint@10.10.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
     devDependencies:
-      '@types/eslint-config-prettier':
-        specifier: ^6.11.3
-        version: 6.11.3
       '@types/eslint-plugin-jsx-a11y':
         specifier: ^6.10.1
         version: 6.10.1(jiti@2.7.0)(supports-color@7.2.0)
