@@ -6,8 +6,12 @@ export const NextJSDictionaries = [...TSXDictionaries, 'next'];
 
 export const NextJS: Linter.Config[] = [
   ...TSX,
+  { ignores: ['**/public/**', '**/.next/**'] },
   {
     name: 'idea2app/next-js',
+    plugins: {
+      '@next/next': nextPlugin
+    },
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,

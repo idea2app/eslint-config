@@ -1,6 +1,6 @@
 {
   "name": "eslint-idea2app-next-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared Next.js ESLint rules for idea2app projects",
   "license": "LGPL-3.0",
   "repository": {
