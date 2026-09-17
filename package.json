@@ -16,7 +16,6 @@
     "start:inspector": "eslint-config-inspector start",
     "build:inspector": "eslint-config-inspector build",
     "build": "pnpm -r --filter \"./packages/**\" build  &&  pnpm build:inspector",
-    "test": "pnpm -r --filter \"./packages/**\" build  &&  pnpm -r --filter \"./packages/**\" test",
-    "prepublishOnly": "npm t"
+    "test": "pnpm -r --filter \"./packages/**\" build  &&  pnpm -r --filter \"./packages/**\" test"
   }
 }

@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "description": "Shared JavaScript ESLint rules for idea2app projects",
   "license": "LGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idea2app/eslint-config",
+    "directory": "packages/eslint-idea2app-js"
+  },
   "type": "module",
   "files": [
     "dist",
