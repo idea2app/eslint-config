@@ -12,10 +12,11 @@
     "eslint-idea2app-tsx": "workspace:*"
   },
   "scripts": {
-    "build": "pnpm -r --filter \"./packages/**\" build  &&  pnpm build:inspector",
-    "build:inspector": "eslint-config-inspector build",
-    "test": "pnpm -r --filter \"./packages/**\" build && pnpm -r --filter \"./packages/**\" test",
     "dev": "eslint-config-inspector dev",
-    "start:inspector": "eslint-config-inspector start"
+    "start:inspector": "eslint-config-inspector start",
+    "build:inspector": "eslint-config-inspector build",
+    "build": "pnpm -r --filter \"./packages/**\" build  &&  pnpm build:inspector",
+    "test": "pnpm -r --filter \"./packages/**\" build  &&  pnpm -r --filter \"./packages/**\" test",
+    "prepublishOnly": "npm t"
   }
 }
